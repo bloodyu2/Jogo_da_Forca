@@ -91,7 +91,7 @@ class Jogo_da_Forca:
 		
 	# Método para verificar se o jogador venceu
 	def Jogo_da_Forca_won(self):
-		if '__' not in self.hide_palavra():
+		if '_' not in self.hide_palavra():
 			return True
 		return False
 
@@ -107,7 +107,7 @@ class Jogo_da_Forca:
 		
 	# Método para checar o status do game e imprimir o board na tela
 	def print_game_status(self):
-		print (tabuleiro[len(self.guessed_letras)])
+		print (tabuleiro[len(self.letras_erradas)])
 		print ('\nPalavra:' + self.hide_palavra())
 		print ('\nErros: ',)
 		for letra in self.letras_erradas:
